@@ -1,0 +1,62 @@
+@use "./../../partials/palette";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.ProductPage {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-family: "Cinzel", serif;
+    &__ColourBox {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        &__Colour {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+    }
+    &__OutOfStock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        height: 2em;
+        background-color: lightgrey;
+        color: rgb(134, 134, 134);
+        margin: 20px;
+        &__Text {
+            text-align: center;
+        }
+    }
+    &__Title {
+        text-align: center;
+        font-size: 30px;
+    }
+    &__StockNotice {
+        color: red;
+    }
+    &__CartInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        background-color: palette.$font-colour;
+        height: 2em;
+        margin: 20px;
+    }
+
+    &__Gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &__GalleryImg {
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid grey;
+            border-radius: 5px;
+        }
+    }
+}

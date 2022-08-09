@@ -1,0 +1,22 @@
+@use "./../../partials/palette";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.ProductCarousel {
+    background-color: palette.$soft-font-colour;
+    padding: 20px;
+    &__Title {
+        color: palette.$carousel-hover-colour;
+        font-size: 30px;
+        font-family: "Cinzel", serif;
+    }
+    &__Items {
+        display: flex;
+        justify-content: center;
+        &__Grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 60vw;
+        }
+    }
+}

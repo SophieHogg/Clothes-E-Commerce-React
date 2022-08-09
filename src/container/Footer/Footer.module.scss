@@ -1,0 +1,6 @@
+@use "./../../partials/palette";
+
+.Footer {
+    background-color: palette.$footer-colour;
+    height: 10vh;
+}

@@ -1,0 +1,23 @@
+@use "./../../partials/palette";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.Home {
+    background-color: palette.$body-colour;
+    min-height: 72.5vh;
+    padding: 10px;
+    color: palette.$button-hover-colour;
+    &__WrapperDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__Subtitle {
+        font-family: "Cinzel", serif;
+        font-size: 40px; //wide devices
+    }
+    &__Para {
+        font-family: "Cinzel", serif;
+        width: 70vw;
+        font-size: 25px; //wide devices
+    }
+}

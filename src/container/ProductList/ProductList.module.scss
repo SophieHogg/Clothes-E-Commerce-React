@@ -1,0 +1,25 @@
+@use "./../../partials/palette";
+@use "./../../partials/devices";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.ProductList {
+    background-color: palette.$body-colour;
+    padding: 30px;
+    font-family: "Cinzel", serif;
+    &__Items {
+        display: flex;
+        justify-content: center;
+        &__Grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 95vw;
+            @include devices.tablet-ls {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include devices.small-width {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

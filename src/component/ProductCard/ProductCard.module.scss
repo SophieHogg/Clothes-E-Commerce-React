@@ -1,0 +1,93 @@
+@use "./../../partials/palette";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.Product {
+    background-color: palette.$card-colour;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 20px;
+    padding: 20px 40px;
+    height: 570px;
+    font-family: "Cinzel", serif;
+    &__Title {
+        color: palette.$font-colour;
+    }
+    &__Image {
+        width: 200px;
+        height: 250px;
+        border-radius: 5px;
+        border: 1px solid palette.$button-hover-colour;
+    }
+    &__ColourRow {
+        display: flex;
+        justify-content: center;
+    }
+    &__Price {
+        font-size: 20px;
+        color: palette.$font-colour;
+    }
+    &__Favourited {
+        font-family: "Cinzel", serif;
+        height: 2em;
+        width: 15em;
+        background-color: palette.$soft-font-colour;
+        cursor: pointer;
+        border: 0;
+        &:hover {
+            background-color: palette.$footer-colour;
+        }
+        &:active {
+            background-color: palette.$header-colour;
+        }
+    }
+    &__OutOfStock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__Text {
+            width: 50%;
+            background-color: lightgrey;
+            color: rgb(134, 134, 134);
+            height: 2em;
+            text-align: center;
+        }
+    }
+    &__CartInfoWrapper {
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 20px 0px;
+    }
+    &__CartInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        background-color: palette.$font-colour;
+        height: 2em;
+        &__InCart {
+            width: 5em;
+        }
+        &__Button {
+            height: 2em;
+            width: 2em;
+            font-size: 20px;
+            margin: 0;
+
+            background-color: palette.$soft-font-colour;
+            cursor: pointer;
+            border: 0;
+            &:hover {
+                background-color: palette.$footer-colour;
+            }
+            &:active {
+                background-color: palette.$header-colour;
+            }
+        }
+    }
+    &:hover {
+        background-color: palette.$card-hover-colour;
+    }
+}
+a {
+    text-decoration: none;
+}

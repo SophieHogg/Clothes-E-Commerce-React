@@ -1,0 +1,29 @@
+@use "./../../partials/palette";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.NavBar {
+    font-family: "Cinzel", serif;
+    background-color: palette.$body-colour;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Nav_backgroundDiv {
+    width: 150px;
+    padding: 20px 5px;
+    font-size: 20px;
+    text-align: center;
+    &:hover {
+        background-color: palette.$button-colour;
+    }
+    &:active {
+        background-color: palette.$button-hover-colour;
+    }
+}
+
+.Link {
+    color: palette.$font-colour;
+    &_Active {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,9 @@
+@use "./../../partials/palette";
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap");
+
+.Header {
+    font-family: "BhuTuka Expanded One", cursive;
+    background-color: palette.$header-colour;
+    height: 10vh;
+    padding: 10px;
+}

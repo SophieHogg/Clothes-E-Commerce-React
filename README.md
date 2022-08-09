@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# E-Commerce Website (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Clothes E-Shop configured using React.
 
-## Available Scripts
+![alt text](./src/images/ClothingStoreInterface.png)
 
-In the project directory, you can run:
+## Design & Styling
 
-### `npm start`
+The colour palette, as always, was based on Australian flora - in this case, gum tree flowers. I tried to use contrasting colours to make the page more eye-catching to the users, with the differing colours clearly representing different parts of the page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Layout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+There is a homepage with a welcome message and there is a product list page which contains all of the product cards. Eventually, I would like there to be a cart page which updates with user input (I have added the link here but not the logic etc. that goes with it.)
 
-### `npm test`
+You can click on any of the cards on the Product List page to go to a specific clothing item, where you can find more information. At the moment, you can only add to favourites or add to cart on the homepage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Logic
 
-### `npm run build`
+There is some logic incorporated into this app - favourited items will appear in the favourite items catalogue at the top of the product list page. This needs to be a rotating carousel.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Things to be added
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### MVP Items
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   Rotating carousel
+-   Updating items in cart and favourites on click, instead of on refresh
+-   Ability to add specific colours to cart, and adding to cart/favourites from Product Page screen.
 
-### `npm run eject`
+### Extension Items
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   Adding a cart with logic
+-   Stopping people from adding -1 of an item to their cart
+-   Changing the url input in the database to be an array and mapping out the images in the product page.

@@ -42,12 +42,16 @@ There is some logic incorporated into this app - favourited items will appear in
 ### MVP Items
 
 -   Rotating carousel
--   Updating items in cart and favourites on click, instead of on refresh
 -   Ability to add specific colours to cart, and adding to cart/favourites from Product Page screen.
 -   Remove 'inCart' from fireStore and solely use React logic to define how many is inCart.
 
 ### Extension Items
 
 -   Adding a cart with logic
--   Stopping people from adding -1 of an item to their cart
 -   Changing the url input in the database to be an array and mapping out the images in the product page.
+
+## Changes Made 10/08
+
+-   Update cart display, stock display, favourited bool on click
+-   Stopped people from adding negative numbers of items to cart
+-   Stopped people from adding more to cart than there are in stock.

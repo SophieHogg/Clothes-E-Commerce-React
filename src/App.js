@@ -1,7 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
-import { getStoreItems } from "./services/getStoreItems";
-import ProductList from "./container/ProductList/ProductList";
+import { useEffect } from "react";
 import Header from "./container/Header/Header";
 import Footer from "./container/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,16 +8,10 @@ import Home from "./container/Home/Home";
 import Nav from "./container/Nav/Nav";
 import Cart from "./container/Cart/Cart";
 import ProductPage from "./container/ProductPage/ProductPage";
+import ProductList from "./container/ProductList/ProductList";
 
 function App() {
-    const [storeItems, setStoreItems] = useState([]);
-    useEffect(() => {
-        const wrapper = async () => {
-            const storeItems = await getStoreItems();
-            setStoreItems(storeItems);
-        };
-        wrapper();
-    }, []);
+    useEffect(() => {}, []);
     return (
         <div className="App">
             <PageWrapper>
@@ -28,10 +20,7 @@ function App() {
                     <Header />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route
-                            path="/productlist"
-                            element={<ProductList productList={storeItems} />}
-                        />
+                        <Route path="/productlist" element={<ProductList />} />
                         <Route path="/cart" element={<Cart />} />
                         <Route
                             path="/productlist/:id"

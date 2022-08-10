@@ -3,18 +3,22 @@ import styles from "./ProductList.module.scss";
 import ProductCarousel from "../../component/ProductCarousel/ProductCarousel";
 import { useState, useEffect } from "react";
 import {
+    getStoreItems,
     addToCart,
     removeFromCart,
     toggleFavourites,
 } from "../../services/getStoreItems";
 
-const ProductList = ({ productList }) => {
+const ProductList = () => {
     const [clicks, setClicks] = useState(0);
     const [favourite, setFavourite] = useState(false);
+    const [storeItems, setStoreItems] = useState([]);
 
     useEffect(() => {
-        const wrapper = async () => {};
-
+        const wrapper = async () => {
+            const storeItems = await getStoreItems();
+            setStoreItems(storeItems);
+        };
         wrapper();
     }, [clicks, favourite]);
 
@@ -35,7 +39,7 @@ const ProductList = ({ productList }) => {
     return (
         <main>
             <ProductCarousel
-                productList={productList.filter((item) => {
+                productList={storeItems.filter((item) => {
                     return item.favourited === true;
                 })}
             />
@@ -44,7 +48,7 @@ const ProductList = ({ productList }) => {
                 <h1>Shop</h1>
                 <div className={styles.ProductList__Items}>
                     <div className={styles.ProductList__Items__Grid}>
-                        {productList.map((item) => (
+                        {storeItems.map((item) => (
                             <ProductCard
                                 key={item.id}
                                 data={item}

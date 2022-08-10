@@ -1,10 +1,13 @@
 @use "./../../partials/palette";
+@use "./../../partials/devices";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
 
 .ProductPage {
     display: flex;
+    background-color: palette.$card-colour;
+    min-height: 72.5vh;
     justify-content: center;
-    margin: 10px;
+    padding: 10px;
     font-family: "Cinzel", serif;
     &__ColourBox {
         display: flex;
@@ -32,10 +35,12 @@
     }
     &__Title {
         text-align: center;
-        font-size: 30px;
+        font-size: 35px;
+        color: palette.$font-colour;
     }
     &__StockNotice {
-        color: red;
+        color: palette.$soft-font-colour;
+        font-size: 24px;
     }
     &__CartInfo {
         display: flex;
@@ -45,11 +50,22 @@
         background-color: palette.$font-colour;
         height: 2em;
         margin: 20px;
+        @include devices.phone {
+            font-size: 20px;
+            margin: 10px;
+        }
+        @include devices.phone-s {
+            font-size: 15px;
+            margin: 5px;
+        }
     }
 
     &__Gallery {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        @include devices.desktop {
+            grid-template-columns: repeat(2, 1fr);
+        }
         &__GalleryImg {
             width: 400px;
             height: 400px;
@@ -57,6 +73,24 @@
             margin: 20px;
             border: 1px solid grey;
             border-radius: 5px;
+            @include devices.small-width {
+                width: 300px;
+                height: 300px;
+            }
+            @include devices.tablet-ls {
+                width: 300px;
+                height: 300px;
+            }
+            @include devices.phone {
+                width: 200px;
+                height: 200px;
+            }
+            @include devices.phone-s {
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                padding: 5px;
+            }
         }
     }
 }

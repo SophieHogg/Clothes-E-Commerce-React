@@ -24,18 +24,24 @@ const ProductCard = (props) => {
                             <ColourBox key={index} colour={colour} />
                         ))}
                     </div>
-                    {data.stock === 0 ? (
+                </NavLink>
+                {data.stock === 0 ? (
+                    <div>
                         <div className={styles.Product__OutOfStock}>
                             <p className={styles.Product__OutOfStock__Text}>
                                 Out of stock
                             </p>
+                            <br />
                         </div>
-                    ) : (
+                        <p>In Cart: {data.inCart}</p>
+                    </div>
+                ) : (
+                    <div>
                         <p className={styles.Product__Price}>
                             ${data.price.toFixed(2)}
                         </p>
-                    )}
-                </NavLink>
+                    </div>
+                )}
                 <div className={styles.Product__CartInfoWrapper}>
                     <div className={styles.Product__CartInfo}>
                         <button
@@ -57,6 +63,7 @@ const ProductCard = (props) => {
                         <button
                             className={styles.Product__CartInfo__Button}
                             onClick={() =>
+                                data.stock > 0 &&
                                 addToCartClick(data.id, data.stock, data.inCart)
                             }
                         >

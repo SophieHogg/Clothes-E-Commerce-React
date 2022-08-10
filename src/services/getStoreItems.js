@@ -35,16 +35,18 @@ export const removeFromCart = async (id, stock, inCart) => {
     const collectionRef = firestore.collection("items");
     //get document ref
     const docRef = collectionRef.doc(id);
-    docRef.update({ stock: stock + 1 });
-    docRef.update({ inCart: inCart - 1 });
-    return true;
+    if (inCart > 0) {
+        docRef.update({ stock: stock + 1 });
+        docRef.update({ inCart: inCart - 1 });
+        return true;
+    }
 };
 
 export const addToCart = async (id, stock, inCart) => {
     const collectionRef = firestore.collection("items");
     //get document ref
     const docRef = collectionRef.doc(id);
-    docRef.update({ stock: stock - 1 });
+    stock > 0 && docRef.update({ stock: stock - 1 });
     docRef.update({ inCart: inCart + 1 });
     return true;
 };

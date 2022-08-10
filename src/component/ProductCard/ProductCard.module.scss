@@ -10,14 +10,25 @@
     padding: 20px 40px;
     height: 650px;
     font-family: "Cinzel", serif;
+    @include devices.extra-large-width {
+        height: 950px;
+        margin: 5px 20px;
+    }
     &__Title {
         color: palette.$font-colour;
+        @include devices.extra-large-width {
+            font-size: 30px;
+        }
     }
     &__Image {
         width: 200px;
         height: 250px;
         border-radius: 5px;
         border: 1px solid palette.$button-hover-colour;
+        @include devices.extra-large-width {
+            width: 400px;
+            height: 500px;
+        }
     }
     &__ColourRow {
         display: flex;
@@ -26,6 +37,9 @@
     &__Price {
         font-size: 20px;
         color: palette.$font-colour;
+        @include devices.extra-large-width {
+            font-size: 25px;
+        }
     }
     &__Favourited {
         font-family: "Cinzel", serif;
@@ -34,11 +48,19 @@
         background-color: palette.$soft-font-colour;
         cursor: pointer;
         border: 0;
+        @include devices.extra-large-width {
+            font-size: 18px;
+        }
         &:hover {
             background-color: palette.$footer-colour;
         }
         &:active {
             background-color: palette.$header-colour;
+        }
+        &__Text {
+            @include devices.extra-large-width {
+                font-size: 20px;
+            }
         }
     }
     &__OutOfStock {
@@ -46,6 +68,11 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        &__InCart {
+            @include devices.extra-large-width {
+                font-size: 18px;
+            }
+        }
         &__Text {
             width: 50%;
             background-color: lightgrey;

@@ -33,7 +33,9 @@ const ProductCard = (props) => {
                             </p>
                             <br />
                         </div>
-                        <p>In Cart: {data.inCart}</p>
+                        <p className={styles.Product__OutOfStock__InCart}>
+                            In Cart: {data.inCart}
+                        </p>
                     </div>
                 ) : (
                     <div>
@@ -79,7 +81,11 @@ const ProductCard = (props) => {
                 >
                     Toggle Favourite
                 </button>
-                {data.favourited && <p>Added to Favourites!</p>}
+                {data.favourited && (
+                    <p className={styles.Product__Favourited__Text}>
+                        Added to Favourites!
+                    </p>
+                )}
             </section>
         </>
     );
